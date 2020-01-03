@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="${tit}"></title>
+<link rel="stylesheet"
+ href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+
+</head>
+<body>
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  <a class="navbar-brand" href="/index">Comunidad Hack Space</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+	    <div class="navbar-nav">
+	      <a class="nav-item nav-link active" href="/formulario">inscripcion<span class="sr-only">(current)</span></a>
+	      <a class="nav-item nav-link" th:href="@{/listar}">Comunidad</a>
+	      <a class="nav-item nav-link" href="#">noDesignado</a>
+	      </div>
+	  </div>
+	</nav> 
+	
+
+
+<div class="container" >
+
+	<h1 class="border border-dark border-top-0 border-left-0 border-right-0" th:text="${titulo}" ></h1>
+
+
+	<form th:action="@{/formulario}" th:object="${usuario}" method="post">
+	
+	<div class="form-group row">
+		<label class="col-sm-2 col-form-label">Nombre</label>
+		<div class="col-sm-6">
+		<input type="text"  th:field="*{nombre}"  class="form-control" />
+		</div>	
+	</div>	
+	<div class="form-group row">
+		<label class="col-sm-2 col-form-label">Apellido</label>
+		<div class="col-sm-6">
+		<input type="text" th:field="*{apellido}" class="form-control"/>
+		</div>	
+	</div>	
+	<div class="form-group row">
+		<label class="col-sm-2 col-form-label">Email</label>
+		<div class="col-sm-6">
+		<input type="email" th:field="*{email}" class="form-control"/>
+		</div>	
+	</div>	
+	<div class="form-group row">
+		<div class="col-sm-1">
+		<input type="submit"  value="Crear Usuario" class="btn btn-dark" />
+		</div>	
+	</div>	
+	
+	
+		<input type="hidden" th:field="*{fechaInicio}"/>
+		<input type="hidden" th:field="*{id}"/>
+		
+	</form>
+
+</div>
+</body>
+</html>

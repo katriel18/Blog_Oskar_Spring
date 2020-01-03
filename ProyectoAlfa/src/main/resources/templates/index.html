@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+
+<title  >inicio</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/> 
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  <a class="navbar-brand" href="/index">Comunidad Hack Space</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+	    <div class="navbar-nav">
+	      <a class="nav-item nav-link active" href="/formulario">inscripcion<span class="sr-only">(current)</span></a>
+	      <a class="nav-item nav-link" th:href="@{/listar}">Comunidad</a>
+	      <a class="nav-item nav-link" href="#">noDesignado</a>
+	      </div>
+	  </div>
+	</nav> 
+
+	<h1 class="color-verde" >Comunidad Hack Space</h1>
+	<h2 class="color-rojo">Aprendiendo en comunidad</h2>
+	<img class="cms" th:src="@{/cms.png}" ></img>
+	
+	
+</body>
+</html>
