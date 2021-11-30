@@ -4,5 +4,5 @@ Realizado en Spring utilizando Git y GitHub
 ## Visitor count
 
 <p> 
-  <img src="https://profile-counter.glitch.me/sergiomauz/count.svg" />
+  <img src="https://profile-counter.glitch.me/katriel18/count.svg" />
 </p>
